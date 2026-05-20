@@ -4,12 +4,12 @@ services:
     container_name: chai-aur-redis
     ports:
       - "6379:6379"
-    command: ["redis-server", "--appendonly", "yes"] 
+    command: ["redis-server", "--appendonly", "yes"]
     volumes:
       - redis-data:/data
 
   mongo:
-    image: mongo:7    
+    image: mongo:7
     container_name: chai-aur-mongo
     ports:
       - "27017:27017"
@@ -20,4 +20,4 @@ services:
 
 volumes:
   redis-data:
-  mongo-data:        
+  mongo-data:
