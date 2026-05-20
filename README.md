@@ -1,46 +1,36 @@
 # Redis Learning Projects
 
-This repository contains foundational Redis projects and setup guides for learning Redis with Node.js, Express, and MongoDB.
+This repository contains foundational Redis projects and practical examples for learning Redis with Node.js, Express, and MongoDB.
 
 ## Projects
 
-### 1. Foundation of Redis (`foundation-of-redis-01`)
-Introductory project demonstrating Redis integration with Express and MongoDB.
+### 1. 01-foundation-of-redis
+Basic introduction to Redis with Express and MongoDB integration.
 
 **Features:**
 - Redis connection and ping test
 - MongoDB connection verification
-- RESTful API endpoints for both databases
+- Health check endpoints
 
-**Getting Started:**
-```bash
-cd "foundation-of-redis-01"
-npm install
-npm run dev
-```
+**Run:** `npm run dev` from `01-foundation-of-redis/`
 
-**API Endpoints:**
-- `GET /redis` - Check Redis connection
-- `GET /mongo` - Check MongoDB connection
+---
 
-### 2. Setup Redis (`setup_redis`)
-Complete Redis setup with Express and MongoDB integration.
+### 2. 02-setup-redis
+Complete Redis setup example with Express and MongoDB integration.
 
 **Features:**
-- Express server setup
 - Redis client configuration
+- Express server setup
 - MongoDB integration
 - Environment variable support
 
-**Getting Started:**
-```bash
-cd setup_redis
-npm install
-npm run dev
-```
+**Run:** `npm run dev` from `02-setup-redis/`
 
-### 3. Site Banner (`site_banner_03`)
-Practical example of Redis usage for storing and managing dynamic banner content.
+---
+
+### 3. 03-site-banner
+Practical example of Redis usage for dynamic banner content management.
 
 **Features:**
 - POST banner message to Redis cache
@@ -48,22 +38,37 @@ Practical example of Redis usage for storing and managing dynamic banner content
 - DELETE banner from Redis
 - Check banner existence
 
-**Getting Started:**
-```bash
-cd site_banner_03
-npm install
-npm run dev
-```
-
-**API Endpoints:**
+**API:**
 - `POST /banner` - Set banner message
 - `GET /banner` - Get banner message
 - `DELETE /banner` - Remove banner
 - `GET /banner/exists` - Check if banner exists
 
+**Run:** `npm run dev` from `03-site-banner/`
+
+---
+
+### 4. 04-otp-login-ttl
+Redis-based OTP system with automatic expiration using TTL.
+
+**Features:**
+- Generate OTPs for phone numbers
+- Auto-expiring OTPs (30 seconds TTL)
+- Verify OTPs before expiration
+- Check remaining time-to-live
+
+**API:**
+- `POST /otp` - Generate OTP
+- `POST /otp/verify` - Verify OTP
+- `GET /otp/:phone/ttl` - Check TTL
+
+**Run:** `npm run dev` from `04-otp-login-ttl/`
+
+---
+
 ## Docker Setup
 
-Use the provided `docker-compose.yml` to run Redis and MongoDB services:
+Run Redis and MongoDB services:
 
 ```bash
 docker-compose up -d
@@ -75,7 +80,7 @@ docker-compose up -d
 
 ## Environment Variables
 
-Create a `.env` file in each project root:
+Create a `.env` file in each project:
 
 ```env
 REDIS_URL=redis://localhost:6379
@@ -93,7 +98,15 @@ MONGO_URL=mongodb://localhost:27017/chai_aur_redis
 
 - **express** - Web framework
 - **ioredis** - Redis client
-- **mongoose** - MongoDB ODM
+- **mongoose** - MongoDB ODM (for projects 1 & 2)
+
+## Key Redis Concepts Covered
+
+✅ Connection & Basic Commands  
+✅ Caching Strategies  
+✅ Time-To-Live (TTL) & Expiration  
+✅ Redis Data Persistence  
+✅ Integration with Express
 
 ## License
 
