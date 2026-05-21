@@ -1,0 +1,19 @@
+{
+  "name": "pub-sub-redis",
+  "version": "1.0.0",
+  "description": "Redis Pub/Sub messaging system",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node src/index.js",
+    "subscriber": "node src/subscriber.js"
+  },
+  "keywords": ["redis", "pub-sub", "messaging", "express"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "ioredis": "^5.10.1"
+  }
+}
