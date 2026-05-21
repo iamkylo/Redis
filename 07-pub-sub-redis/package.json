@@ -1,15 +1,14 @@
 {
-  "name": "pub-sub-redis",
+  "name": "site-banner",
   "version": "1.0.0",
-  "description": "Redis Pub/Sub messaging system",
+  "description": "Redis banner caching example",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node src/index.js",
-    "subscriber": "node src/subscriber.js"
+    "dev": "node src/api.js"
   },
-  "keywords": ["redis", "pub-sub", "messaging", "express"],
+  "keywords": ["redis", "express", "caching", "banner"],
   "author": "",
   "license": "ISC",
   "dependencies": {
